@@ -1,3 +1,1 @@
-## Exploring the 20 newsgroups dataset
-
-This is an interactive widget to explore the 20 newsgroups dataset which has been embedded using UMAP and clustered using HDBSCAN.
+You can see the interactive widget [here](plots/umap_20_newsgroups_interactive.html).
