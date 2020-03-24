@@ -78,6 +78,21 @@ for(var i=0; i<labels.length; i++){
 return indices;
 """
 
+js_meta_filter_code = """
+var cluster = slider.value;
+
+var indices = [];
+for(var i=0; i<labels.length; i++){
+    // Ignore outliers if the box is checked
+
+    if (labels[i] == cluster){
+        indices.push(i);
+    }
+    }
+
+return indices;
+"""
+
 def filter_callback(source):
     callback = CustomJS(args=dict(source=source), code="""
     source.change.emit();

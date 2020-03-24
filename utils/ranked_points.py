@@ -102,6 +102,13 @@ class RankedPoints:
         cluster_of_interest.sort_values('dist_to_rep_point', inplace=True)
         return cluster_of_interest
     
+    def get_all_cluster_rankings(self):
+        """Calculate the rank of each point within a cluster"""
+        if 'dist_to_rep_point' not in self.embedding_df.columns:
+            self.calculate_all_distances_to_center()
+
+        self.embedding_df['rank_in_cluster'] = self.embedding_df.groupby('cluster')['dist_to_rep_point'].rank(method='min')
+
     def get_closest_samples_for_cluster(self, cluster_id, n_samples=5):
         """Get the N closest points to the cluster centroid/medoid"""
         return self.rank_cluster_points_by_distance(cluster_id).head(n_samples)

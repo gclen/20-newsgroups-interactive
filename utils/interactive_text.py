@@ -13,8 +13,11 @@ Clear and press enter to reset the plot.</p1>""")
 
 description_slider = Div(text="""<h3>Filter by the Clusters:</h3><p1>The slider below can be used to filter the target cluster. 
 Simply slide the slider to the desired cluster number to display the plots that belong to that cluster. 
-Slide back to 20 to show all.</p1>""")
+Slide back to the right to show all.</p1>""")
 
 description_checkbox = Div(text="""<h3>Ignore outlying points:</h3><p1>The checkbox below can be used to ignore documents that are not part of a cluster.</p1>""")
+
+description_meta_slider = Div(text="""<h3>Explore metadata for a cluster</h3><p1>The slider below can be used to filter the target cluster. 
+Simply slide the slider to the desired cluster number to display the rows that belong to that cluster.</p1>""")
 
 citation = Div(text="""<p>This notebook was adapted from <a href="https://github.com/MaksimEkin/COVID19-Literature-Clustering/blob/master/COVID19_literature_clustering.ipynb"> a notebook created by MaksimEkin</a></p>""")
